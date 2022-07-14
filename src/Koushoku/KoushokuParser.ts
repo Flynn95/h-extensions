@@ -79,7 +79,7 @@ export class Parser {
     parseChapterDetails($: CheerioSelector, mangaId: string, chapterId: string): ChapterDetails {
         const pages: string[] = []
         const totalPages = parseInt($('.total').first().text()) ?? ''
-        const data_id = $('body').attr('data-id')
+        const data_id = $('#reader').attr('data-id')
         const url = parse(($('.page img').attr('src') ?? '')) ?? ''
         const origin = `${url.protocol}//${url.host}`
         console.log(`total is ${totalPages}`)
