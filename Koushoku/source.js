@@ -1864,7 +1864,7 @@ exports.KoushokuInfo = {
     description: 'Extension that pulls manga from Koushoku',
     icon: 'icon.png',
     name: 'Koushoku',
-    version: '1.0.4',
+    version: '1.0.5',
     authorWebsite: 'https://github.com/xOnlyFadi',
     websiteBaseURL: Koushoku_Base,
     contentRating: paperback_extensions_common_1.ContentRating.ADULT,
@@ -2087,7 +2087,7 @@ class Parser {
         var _a, _b, _c;
         const pages = [];
         const totalPages = (_a = parseInt($('.total').first().text())) !== null && _a !== void 0 ? _a : '';
-        const data_id = $('body').attr('data-id');
+        const data_id = $('#reader').attr('data-id');
         const url = (_c = url_1.parse(((_b = $('.page img').attr('src')) !== null && _b !== void 0 ? _b : ''))) !== null && _c !== void 0 ? _c : '';
         const origin = `${url.protocol}//${url.host}`;
         console.log(`total is ${totalPages}`);
