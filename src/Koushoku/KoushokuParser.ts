@@ -80,9 +80,8 @@ export class Parser {
         const pages: string[] = []
         const totalPages = parseInt($('.total').first().text()) ?? ''
         const data_id = $('#reader').attr('data-id')
-        const url = parse(($('.page img').attr('src') ?? '')) ?? ''
+        const url = parse(($('#reader .main img').attr('src') ?? '')) ?? ''
         const origin = `${url.protocol}//${url.host}`
-        console.log(`total is ${totalPages}`)
         for (let i = 0; i < totalPages; i++) {
             pages.push(`${origin}/data/${data_id}/${i+1}.jpg`)
         }
